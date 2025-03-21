@@ -1,4 +1,5 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-# Enable Encoders
+config SHIELD_GGBR
+    def_bool $(shields_list_contains,ggbr)

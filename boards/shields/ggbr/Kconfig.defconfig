@@ -1,4 +1,9 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-# Enable Encoders
+if SHIELD_GGBR
+
+config ZMK_KEYBOARD_NAME
+    default "ggbr"
+
+endif
