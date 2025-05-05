@@ -5,6 +5,7 @@
  */
  
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/led/led.h>
 
 #include "ggbr-layouts.dtsi"
 
@@ -12,6 +13,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &layout_ggbr;
+        zmk,underglow = &led_strip;
     };
 
     kscan0: kscan {
@@ -55,6 +57,47 @@
         RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,6) RC(4,8) RC(4,9) RC(4,10) RC(4,11) RC(4,12) RC(4,13)
         >;
     };
+};
+
+&pinctrl {
+    spi3_default: spi3_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+        };
+    };
+
+    spi3_sleep: spi3_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+            low-power-enable;
+        };
+    };
+};
+
+&spi3 {
+  compatible = "nordic,nrf-spim";
+  status = "okay";
+
+  pinctrl-0 = <&spi3_default>;
+  pinctrl-1 = <&spi3_sleep>;
+  pinctrl-names = "default", "sleep";
+
+  led_strip: ws2812@0 {
+    compatible = "worldsemi,ws2812-spi";
+    label = "WS2812";
+
+    /* SPI */
+    reg = <0>; /* ignored, but necessary for SPI bindings */
+    spi-max-frequency = <4000000>;
+
+    /* WS2812 */
+    chain-length = <66>; /* number of LEDs */
+    spi-one-frame = <0x70>;
+    spi-zero-frame = <0x40>;
+    color-mapping = <LED_COLOR_ID_GREEN
+                          LED_COLOR_ID_RED
+                          LED_COLOR_ID_BLUE>;
+  };
 };
 
 &layout_ggbr {
