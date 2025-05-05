@@ -3,7 +3,7 @@ id: ggbr
 name: ggbr Keyboard
 url: https://github.com/Henvy-Mango/zmk-config
 type: shield
-requires: [nice_nano_v2]
+requires: [nrfmicro_13_52840]
 features:
   - keys
   - studio
