@@ -1,0 +1,9 @@
+# Copyright (c) 2025 Naomi
+# SPDX-License-Identifier: MIT
+
+if SHIELD_GGBR
+
+config ZMK_KEYBOARD_NAME
+    default "ggbr"
+
+endif
