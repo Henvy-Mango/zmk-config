@@ -1,9 +1,0 @@
-file_format: "1"
-id: ggbr
-name: ggbr Keyboard
-url: https://github.com/Henvy-Mango/zmk-config
-type: shield
-requires: [nrfmicro_13_52840]
-features:
-  - keys
-  - studio

@@ -19,11 +19,8 @@
 #
 ---
 include:
-  - board: nice_nano_v2
-    shield: ggbr
-    snippet:
-     - studio-rpc-usb-uart
-     - zmk-usb-logging
+  - board: ggbr
+    snippet: studio-rpc-usb-uart
   # settings_reset is a special case, it is used to reset the settings of the board to default.
-  - board: nice_nano_v2
+  - board: ggbr
     shield: settings_reset
