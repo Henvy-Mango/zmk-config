@@ -1,0 +1,13 @@
+file_format: "1"
+id: ggbr
+name: ggbr_board
+type: board
+arch: arm
+features:
+  - keys
+  - underglow
+  - studio
+outputs:
+  - usb
+  - ble
+url: https://github.com/Henvy-Mango/zmk-config
