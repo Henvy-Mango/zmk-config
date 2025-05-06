@@ -1,6 +1,4 @@
-# nice!nano board configuration
-
-# Copyright (c) 2020 Pete Johanson
+# Copyright (c) 2025 Naomi
 # SPDX-License-Identifier: MIT
 
 config BOARD_GGBR
