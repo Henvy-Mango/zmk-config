@@ -24,35 +24,5 @@
         &kp LCTRL  &kp LGUI  &kp LALT  &mo 1   &kp SPACE  &mo 1   &kp RALT  &mo 2   &kp LEFT   &kp DOWN  &kp RIGHT
             >;
         };
-
-        layer_1 {
-            bindings = <
-        &kp GRAVE  &kp F1  &kp F2    &kp F3    &kp F4     &kp F5  &kp F6  &kp F7   &kp F8           &kp F9          &kp F10       &kp F11  &kp F12  &trans
-        &trans     &trans  &trans    &kp UP    &trans     &trans  &trans  &trans   &kp PRINTSCREEN  &kp SCROLLLOCK  &trans        &trans   &trans   &trans
-        &trans     &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &kp INS  &kp HOME         &kp PG_UP       &trans        &trans   &trans
-        &trans     &trans  &trans    &trans    &rgb_ug RGB_TOG     &trans  &trans  &trans   &kp END          &kp PG_DN       &trans        &trans   &trans   &trans
-        &trans     &trans  &trans    &trans    &trans     &trans  &trans  &trans   &kp K_MUTE       &kp C_VOL_DN    &kp C_VOL_UP
-            >;
-        };
-
-        layer_2 {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_3 { status = "reserved"; };
-
-        layer_4 { status = "reserved"; };
-
-        layer_5 { status = "reserved"; };
-
-        layer_6 { status = "reserved"; };
-
-        layer_7 { status = "reserved"; };
     };
 };
