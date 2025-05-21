@@ -35,7 +35,7 @@ static int led_layer_listener_cb(const zmk_event_t *eh) {
   // layer NUM -> led
   if (ev->layer == 2) {
     if (ev->state) {
-      led_on(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)));
+      led_blink(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)), 500, 500);
     } else {
       led_off(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)));
     }
