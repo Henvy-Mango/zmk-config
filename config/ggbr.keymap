@@ -18,7 +18,17 @@
         };
     };
 
-    keymap0: keymap {
+    keymap0: combos {
+        compatible = "zmk,combos";
+
+        quick_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <41 52 46>;
+            slow-release;
+        };
+    };
+
+    keymap {
         compatible = "zmk,keymap";
 
         default_layer {
