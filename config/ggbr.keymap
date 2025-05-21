@@ -25,6 +25,7 @@
         quick_bootloader {
             bindings = <&bootloader>;
             key-positions = <41 52 46>;
+            slow-release;
         };
 
         bt_clear {
