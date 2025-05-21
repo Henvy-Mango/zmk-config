@@ -20,8 +20,8 @@
 ---
 include:
   - board: ggbr
-    snippet: studio-rpc-usb-uart
-    # snippet: studio-rpc-usb-uart zmk-usb-logging
+    # snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart zmk-usb-logging
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   # settings_reset is a special case, it is used to reset the settings of the board to default.
   # - board: ggbr
