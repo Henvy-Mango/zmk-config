@@ -48,21 +48,21 @@
 
         fn_layer {
             bindings = <
-&kp GRAVE  &kp F1  &kp F2    &kp F3    &kp F4           &kp F5           &kp F6  &kp F7   &kp F8           &kp F9          &kp F10          &kp F11  &kp F12  &trans
-&trans     &trans  &trans    &kp UP    &trans           &trans           &trans  &trans   &kp PRINTSCREEN  &kp SCROLLLOCK  &kt PAUSE_BREAK  &trans   &trans   &trans
-&trans     &trans  &kp LEFT  &kp DOWN  &kp RIGHT        &trans           &trans  &kp INS  &kp HOME         &kp PG_UP       &trans           &trans   &trans
-&trans     &trans  &trans    &trans    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans  &trans   &kp END          &kp PG_DN       &trans           &trans   &trans   &trans
-&trans     &trans  &trans    &trans    &trans           &trans           &trans  &trans   &kp K_MUTE       &kp C_VOL_DN    &kp C_VOL_UP
+&kp GRAVE  &kp F1    &kp F2    &kp F3    &kp F4           &kp F5           &kp F6  &kp F7   &kp F8           &kp F9          &kp F10          &kp F11  &kp F12  &trans
+&trans     &kt LPAR  &kp RPAR  &kp UP    &trans           &trans           &trans  &trans   &kp PRINTSCREEN  &kp SCROLLLOCK  &kt PAUSE_BREAK  &trans   &trans   &trans
+&trans     &trans    &kp LEFT  &kp DOWN  &kp RIGHT        &trans           &trans  &kp INS  &kp HOME         &kp PG_UP       &trans           &trans   &trans
+&trans     &trans    &trans    &trans    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans  &trans   &kp END          &kp PG_DN       &trans           &trans   &trans   &trans
+&trans     &trans    &trans    &trans    &trans           &trans           &trans  &trans   &kp K_MUTE       &kp C_VOL_DN    &kp C_VOL_UP
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans   &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp HOME  &kp END  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans   &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans   &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans   &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
             >;
         };
 
