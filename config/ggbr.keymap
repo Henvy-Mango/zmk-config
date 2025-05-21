@@ -14,21 +14,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MCTRL";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&kp RCTRL>;
-        };
-    };
-
-    macros {
-        zed_em_kay: zed_em_kay {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp Z &kp M &kp K &kp LS(T) &kp Y &kp P &kp E &kp SPACE &kp S &kp O &kp M &kp E &kp T &kp H &kp I &kp N &kp G &kp DOT &kp DOT &kp DOT>,
-                <&macro_release>,
-                <&kp LSHFT>;
+            bindings = <&kp RCTRL>, <&mo 2>;
         };
     };
 
