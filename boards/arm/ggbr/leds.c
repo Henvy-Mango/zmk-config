@@ -35,10 +35,12 @@ static int led_layer_listener_cb(const zmk_event_t *eh) {
   // layer NUM -> led
   if (ev->layer == 2) {
     if (ev->state) {
-      unsigned int dalay_time = 500;
-      led_blink(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)), dalay_time, dalay_time);
-    } else {
-      led_off(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)));
+      for (int i = 0; i < 3; i++) {
+        led_on(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)));
+        k_sleep(K_MSEC(300));
+        led_off(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)));
+        k_sleep(K_MSEC(300));
+      }
     }
   }
   return 0;
