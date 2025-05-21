@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -22,7 +23,7 @@
     keymap0: combos {
         compatible = "zmk,combos";
 
-        quick_bootloader {
+        bootloader_entry {
             bindings = <&bootloader>;
             key-positions = <41 52 46>;
             slow-release;
@@ -32,6 +33,16 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <41 55 52 18>;
             slow-release;
+        };
+
+        output_tog {
+            bindings = <&out OUT_TOG>;
+            key-positions = <52 41 21>;
+        };
+
+        reset_entry {
+            bindings = <&sys_reset>;
+            key-positions = <52 41 13>;
         };
     };
 
