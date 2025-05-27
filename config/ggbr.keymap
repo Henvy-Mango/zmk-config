@@ -44,6 +44,22 @@
         };
     };
 
+    macros {
+        macro_1: macro_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp N3 &kp N4 &kp N1 &kp N3 &kp N3 &kp N9 &kp N8 &kp N7>;
+            label = "MACRO_1";
+        };
+
+        macro_2: macro_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N8 &kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N1 &kp N9 &kp N3>;
+            label = "MACRO_2";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -69,11 +85,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans    &trans   &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans       &bt BT_PRV   &bt BT_NXT  &trans
-&trans  &kp HOME  &kp END  &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans       &trans       &trans      &trans
-&trans  &trans    &trans   &trans  &trans  &trans  &trans  &trans  &trans      &trans    &kp LC(INS)  &kp LS(INS)  &trans
-&trans  &trans    &trans   &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans       &trans       &trans      &trans
-&trans  &trans    &trans   &trans  &trans  &trans  &trans  &trans  &kp C_PREV  &kp C_PP  &kp C_NEXT
+&trans  &macro_1  &macro_2  &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans       &bt BT_PRV   &bt BT_NXT  &trans
+&trans  &kp HOME  &kp END   &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans       &trans       &trans      &trans
+&trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans      &trans    &kp LC(INS)  &kp LS(INS)  &trans
+&trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans       &trans       &trans      &trans
+&trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &kp C_PREV  &kp C_PP  &kp C_NEXT
             >;
         };
 
@@ -90,6 +106,7 @@
 
     keys {
         compatible = "gpio-keys";
+
         soft_off_gpio_key: soft_off_gpio_key { gpios = <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; };
     };
 
