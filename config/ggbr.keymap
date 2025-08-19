@@ -76,7 +76,7 @@
         fn_layer {
             bindings = <
 &kp TILDE  &kp F1    &kp F2    &kp F3    &kp F4           &kp F5           &kp F6         &kp F7   &kp F8      &kp F9          &kp F10          &kp F11  &kp F12  &trans
-&trans     &kt LPAR  &kp RPAR  &kp UP    &trans           &trans           &kp C_AL_CALC  &trans   &kp PSCRN   &kp SCROLLLOCK  &kt PAUSE_BREAK  &trans   &trans   &trans
+&trans     &kp LPAR  &kp RPAR  &kp UP    &trans           &trans           &kp C_AL_CALC  &trans   &kp PSCRN   &kp SCROLLLOCK  &kp PAUSE_BREAK  &trans   &trans   &trans
 &trans     &trans    &kp LEFT  &kp DOWN  &kp RIGHT        &trans           &trans         &kp INS  &kp HOME    &kp PG_UP       &trans           &trans   &trans
 &trans     &trans    &trans    &trans    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans         &trans   &kp END     &kp PG_DN       &trans           &trans   &trans   &soft_off
 &trans     &trans    &trans    &trans    &trans           &trans           &trans         &trans   &kp C_MUTE  &kp C_VOL_DN    &kp C_VOL_UP
