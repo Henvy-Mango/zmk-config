@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2025 Naomi233
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 #include <physical_layouts.dtsi>
 
 / {

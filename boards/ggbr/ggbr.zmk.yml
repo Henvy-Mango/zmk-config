@@ -3,11 +3,11 @@ id: ggbr
 name: ggbr_board
 type: board
 arch: arm
-features:
-  - keys
-  - underglow
-  - studio
 outputs:
   - usb
   - ble
 url: https://github.com/Henvy-Mango/zmk-config
+revisions:
+  - "1.0.0"
+  - "1.2.0"
+default_revision: "1.0.0"
