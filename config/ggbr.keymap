@@ -14,20 +14,18 @@
     behaviors {
         mctrl: mctrl {
             compatible = "zmk,behavior-tap-dance";
-            label = "MCTRL";
             #binding-cells = <0>;
             bindings = <&kp RCTRL>, <&mo 3>;
         };
 
         mgui: mgui {
             compatible = "zmk,behavior-tap-dance";
-            label = "MGUI";
             #binding-cells = <0>;
             bindings = <&kp RGUI>, <&mo 3>;
         };
     };
 
-    keymap0: combos {
+    combos {
         compatible = "zmk,combos";
 
         bootloader_entry {
@@ -56,14 +54,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N1 &kp N3 &kp N4 &kp N1 &kp N3 &kp N3 &kp N9 &kp N8 &kp N7>;
-            label = "MACRO_1";
         };
 
         macro_2: macro_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N8 &kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N1 &kp N9 &kp N3>;
-            label = "MACRO_2";
         };
     };
 

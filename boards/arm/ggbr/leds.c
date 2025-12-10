@@ -17,9 +17,9 @@ static int led_keylock_listener_cb(const zmk_event_t *eh) {
     unsigned int capsBit = 1 << (HID_USAGE_LED_CAPS_LOCK - 1);
 
     if (flags & capsBit) {
-        led_on(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)));
+        led_on(led_dev, DT_NODE_CHILD_IDX(DT_NODELABEL(caps_led)));
     } else {
-        led_off(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)));
+        led_off(led_dev, DT_NODE_CHILD_IDX(DT_NODELABEL(caps_led)));
     }
 
     return 0;
@@ -36,9 +36,9 @@ ZMK_SUBSCRIPTION(led_indicators_listener, zmk_hid_indicators_changed);
 //   if (ev->layer >= 2) {
 //     if (ev->state) {
 //       for (int i = 0; i < ev->layer; i++) {
-//         led_on(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)));
+//         led_on(led_dev, DT_NODE_CHILD_IDX(DT_NODELABEL(caps_led)));
 //         k_sleep(K_MSEC(300));
-//         led_off(led_dev, DT_NODE_CHILD_IDX(DT_ALIAS(led_caps)));
+//         led_off(led_dev, DT_NODE_CHILD_IDX(DT_NODELABEL(caps_led)));
 //         k_sleep(K_MSEC(300));
 //       }
 //     }
